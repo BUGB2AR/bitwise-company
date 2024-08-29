@@ -1,0 +1,311 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografia padrão */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #6c757d;
+  background-color: #f8f9fa;
+  line-height: 1.8;
+}
+
+/* Centraliza o conteúdo da página */
+.container {
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem; /* Ajuste o preenchimento para telas menores */
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #000000;
+  text-align: center; /* Centraliza os títulos */
+}
+
+p {
+  margin-bottom: 1rem;
+  text-align: center; /* Centraliza os parágrafos */
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Seção de Vídeo */
+.video-section {
+  position: relative;
+  height: 65vh; /* Ocupa toda a altura da viewport */
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz com que o vídeo cubra toda a área */
+  z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Sobreposição escura */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.video-content {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.video-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.video-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.video-content .btn-light {
+  background-color: #fff;
+  color: #007bff;
+}
+
+.video-content .btn-light:hover {
+  background-color: #d4e285;
+  color: #fff;
+}
+
+/* Botões */
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Header */
+header.bg-primary {
+  background-color: #000000 !important;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+header .logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+/* Estiliza os links do menu */
+header nav a {
+  color: #ffffff;
+  margin-left: 7rem;
+  font-weight: 800; /* Texto em negrito */
+  text-transform: uppercase; /* Texto em maiúsculo */
+  transition: color 0.3s ease, transform 0.3s ease; /* Animação suave */
+}
+
+/* Efeito ao passar o mouse */
+header nav a:hover {
+  color: #d3d488;
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+/* Seção Hero */
+.bg-half-170 {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.bg-half-170 h1 {
+  color: #030303;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.bg-half-170 p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.bg-half-170 .btn-primary {
+  background-color: #fff;
+  color: #007bff;
+}
+
+.bg-half-170 .btn-primary:hover {
+  background-color: #d4e285;
+  color: #fff;
+}
+
+/* Seção de Serviços */
+#services {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+#services h2 {
+  margin-bottom: 2rem;
+  font-size: 2.25rem;
+}
+
+.service-box {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borda ligeiramente visível */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 1rem;
+  max-width: 300px; /* Define um tamanho máximo para os cards */
+  margin-left: auto;
+  margin-right: auto; /* Centraliza os cards */
+}
+
+.service-box h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-box p {
+  color: #fafdff;
+}
+
+/* Card de Features */
+.features-box {
+  display: flex; /* Exibe o conteúdo em linha */
+  align-items: center; /* Alinha verticalmente ao centro */
+  padding: 2rem; /* Ajusta o padding interno */
+  background-color: transparent; /* Torna o card invisível */
+  box-shadow: none; /* Remove a sombra */
+  border: none; /* Remove a borda */
+  margin: 1rem auto;
+  max-width: 900px; /* Ajusta a largura máxima do card */
+  overflow: hidden; /* Evita que o conteúdo ultrapasse o card */
+}
+
+.features-box img {
+  width: 72%; /* Aumenta a largura da imagem em 20% em relação ao valor original de 60% */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-right: 1.5rem; /* Espaço entre a imagem e a descrição */
+  object-fit: cover; /* Garante que a imagem cubra a área disponível sem distorcer */
+}
+
+.features-box .description {
+  flex: 1; /* Faz a descrição ocupar o espaço restante */
+  max-width: 28%; /* Ajusta a largura máxima da descrição para compensar o aumento da imagem */
+}
+
+/* Media Queries para dispositivos pequenos */
+@media (max-width: 768px) {
+  .features-box {
+    flex-direction: column; /* Alinha os itens em coluna em telas pequenas */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .features-box img {
+    width: 80%; /* Aumenta a largura da imagem para melhor visualização em telas pequenas */
+    margin-right: 0; /* Remove o espaço entre a imagem e a descrição */
+    margin-bottom: 1rem; /* Adiciona espaço inferior para separar a imagem da descrição */
+  }
+
+  .features-box .description {
+    max-width: 100%; /* Ajusta a largura máxima da descrição para ocupar a largura total em telas pequenas */
+  }
+}
+
+/* Seção de Testemunhos */
+#testimonials {
+  background-color: #fff;
+  padding: 4rem 0;
+}
+
+.testimonial-box {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  max-width: 500px; /* Define um tamanho máximo para os cards */
+  margin-left: auto;
+  margin-right: auto; /* Centraliza os cards */
+}
+
+.testimonial-author {
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+/* Rodapé */
+footer {
+  background-color: #000000;
+  color: #adb5bd;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer .social-icon a {
+  color: #adb5bd;
+  margin: 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+footer .social-icon a:hover {
+  color: #080808;
+}
+
+footer p {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar-nav .nav-item {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+  }
+}
